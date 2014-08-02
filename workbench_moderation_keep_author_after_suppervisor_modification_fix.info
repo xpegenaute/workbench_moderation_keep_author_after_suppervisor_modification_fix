@@ -1,6 +1,6 @@
 name = workbench_moderation_keep_author_after_suppervisor_modification_fix
 description = This fixes the authoring problem when a publisher change to draft a node from a creator.
-package = workbench_moderation_keep_author_after_suppervisor_modification_fix
+package = Workbench
 core = 7.x
 dependencies[] = workbench_moderation
 
