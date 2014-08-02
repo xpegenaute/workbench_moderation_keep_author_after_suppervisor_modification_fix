@@ -1,0 +1,14 @@
+name = workbench_moderation_keep_author_after_suppervisor_modification_fix
+description = This fixes the authoring problem when a publisher change to draft a node from a creator.
+dependencies[] = workbench_moderation
+package = workbench_moderation_keep_author_after_suppervisor_modification_fix
+core = 7.x
+
+files[] = workbench_moderation_keep_author_after_suppervisor_modification_fix.module
+
+; Information added by drupal.org packaging script on 2012-05-19
+version = "7.x-3.4"
+core = "7.x"
+project = "workbench_moderation_keep_author_after_suppervisor_modification_fix"
+datestamp = "1337429753"
+

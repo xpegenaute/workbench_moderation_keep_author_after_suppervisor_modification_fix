@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_node_update().
+ */    
+function workbench_moderation_fix_node_update($node) {
+  db_update('node_revision')
+    ->fields(array('uid' => $node->uid))
+    ->condition('nid', $node->nid)
+    ->condition('vid', $node->vid)
+    ->execute();
+}
+
+/**
+ * Implements hook_workbench_moderation_transition().
+ */
+function workbench_moderation_fix_workbench_moderation_transition($node, $previous_state, $new_state) {
+  if (isset($node->nid) && isset($node->vid) && isset($node->uid)) {
+    workbench_moderation_fix_node_update($node);
+  }
+}
+
+?>
